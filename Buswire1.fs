@@ -90,28 +90,3 @@ let update (message: Msg) (modeling:Model): Model*Cmd<Msg> =
     | SetColor c>              //of CommonTypes.HighLightColor
         {modeling with Color = c}, Cmd.none
 
-
-
-
-
-
-
-
-//---------------Other interface functions--------------------//
-
-/// Given a point on the canvas, returns the wire ID of a wire within a few pixels
-/// or None if no such. Where there are two close wires the nearest is taken. Used
-/// to determine which wire (if any) to select on a mouse click
-let wireToSelectOpt (wModel: Model) (pos: XYPos) : CommonTypes.ConnectionId option = 
-    failwith "Not implemented"
-
-//----------------------interface to Issie-----------------------//
-let extractWire (wModel: Model) (sId:CommonTypes.ComponentId) : CommonTypes.Component= 
-    failwithf "Not implemented"
-
-let extractWires (wModel: Model) : CommonTypes.Component list = 
-    failwithf "Not implemented"
-
-/// Update the symbol with matching componentId to comp, or add a new symbol based on comp.
-let updateSymbolModelWithComponent (symModel: Model) (comp:CommonTypes.Component) =
-    failwithf "Not Implemented"
